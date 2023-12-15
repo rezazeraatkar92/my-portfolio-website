@@ -9,9 +9,11 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useRouter } from "next/navigation";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
+  const router = useRouter();
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
@@ -91,8 +93,10 @@ export default function Intro() {
 
         <a
           className='borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10'
-          href='/CV.pdf'
-          download
+          onClick={(e) => {
+            e.preventDefault();
+            router.push("/rezazeraatkar.pdf");
+          }}
         >
           Download CV{" "}
           <HiDownload className='opacity-60 transition group-hover:translate-y-1' />
