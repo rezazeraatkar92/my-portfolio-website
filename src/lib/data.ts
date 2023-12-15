@@ -2,9 +2,6 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa6";
 import { LuGraduationCap } from "react-icons/lu";
-import AdminDashboardPNG from "@/assets/images/admin-dashbaord-2.png";
-import marketlistMobilePNG from "@/assets/images/marketlist-mobile.png";
-import onlineShopAdminPNG from "@/assets/images/online-shop-admin-2.png";
 
 export const links = [
   {
@@ -86,7 +83,8 @@ export const projectsData = [
       "Apex Charts",
       "Nepcha Analytics",
     ],
-    imageUrl: AdminDashboardPNG,
+    imageUrl:
+      "https://res.cloudinary.com/db7v5ycxn/image/upload/v1702675647/my-portfolio-website/tpujp7sv201xqvnigrbq.png",
     githubUrl:
       "https://github.com/RezaZeraatkar/material-tailwind-dashboard-react",
     demoUrl: "",
@@ -106,7 +104,8 @@ export const projectsData = [
       "Clerk",
       "Cloudinary",
     ],
-    imageUrl: onlineShopAdminPNG,
+    imageUrl:
+      "https://res.cloudinary.com/db7v5ycxn/image/upload/v1702675651/my-portfolio-website/s6fop1ep54on2bmattvy.png",
     githubUrl: "https://github.com/RezaZeraatkar/nextjsOnlineStore",
     demoUrl: "https://nextjs-online-store.vercel.app/",
   },
@@ -124,7 +123,8 @@ export const projectsData = [
       "ApexCharts",
       "react-use-websocket",
     ],
-    imageUrl: marketlistMobilePNG,
+    imageUrl:
+      "https://res.cloudinary.com/db7v5ycxn/image/upload/v1702675648/my-portfolio-website/i00bab7ax3pntqglkxxi.png",
     githubUrl: "https://github.com/RezaZeraatkar/realtime-market-prices",
     demoUrl: "",
   },

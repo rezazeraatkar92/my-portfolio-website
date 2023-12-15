@@ -9,7 +9,6 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import RezaZeraatkarIMG from "@/assets/images/RezaZeraatkar.jpg";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -32,10 +31,12 @@ export default function Intro() {
             }}
           >
             <Image
-              src={RezaZeraatkarIMG}
+              src='https://res.cloudinary.com/db7v5ycxn/image/upload/v1702675742/my-portfolio-website/gyhsu0fs1l6kfocafwcg.jpg'
               alt='Reza Zeraatkar portrait'
               quality='95'
               priority={true}
+              width={500}
+              height={500}
               className='h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl'
             />
           </motion.div>

@@ -70,6 +70,8 @@ export default function Project({
         </div>
         <Image
           src={imageUrl}
+          width={1000}
+          height={1000}
           alt='Project I worked on'
           quality={95}
           className='relative top-8 self-center rounded-t-lg shadow-2xl transition sm:absolute
