@@ -4,8 +4,13 @@ interface IpageProps {}
 
 export default function Blog() {
   return (
-    <div className='w-full'>
-      <h1>Blog edited again</h1>
-    </div>
+    <main className='mx-auto px-6'>
+      <p className='mb-12 mt-12 text-center text-3xl dark:text-white'>
+        Hello and Welcome &nbsp;
+        <span className='whitespace-nowrap'>
+          I'm <span className='font-bold'>Reza</span>
+        </span>
+      </p>
+    </main>
   );
 }

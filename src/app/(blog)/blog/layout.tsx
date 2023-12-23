@@ -5,5 +5,5 @@ interface IBlogLayoutProps {
 }
 
 export default function BlogLayout({ children }: IBlogLayoutProps) {
-  return <div className='max-w-4xl dark:bg-gray-800'>{children}</div>;
+  return <div className='max-w-4xl'>{children}</div>;
 }
