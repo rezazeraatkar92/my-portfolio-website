@@ -147,10 +147,13 @@ export const skillsData = [
   "MongoDB",
   "MySQL",
   "PHP",
+  "Wordpress",
   "Mongoose",
   "PostgreSQL",
   "Python",
   "React Hook Form",
+  "Zod",
   "Git",
   "Docker",
+  "linux",
 ] as const;
