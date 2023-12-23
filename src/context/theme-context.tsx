@@ -1,51 +1,86 @@
 "use client";
 
-import React, { useEffect, useState, createContext, useContext } from "react";
-
-type Theme = "light" | "dark";
+import React, {
+  useEffect,
+  useState,
+  createContext,
+  useContext,
+  useCallback,
+} from "react";
 
 type ThemeContextProviderProps = {
   children: React.ReactNode;
+  themeMode: ThemeMode;
 };
 
 type ThemeContextType = {
-  theme: Theme;
+  theme: ThemeMode;
   toggleTheme: () => void;
-};
+} | null;
 
-const ThemeContext = createContext<ThemeContextType | null>(null);
+const ThemeContext = createContext<ThemeContextType>(null);
 
 export default function ThemeContextProvider({
   children,
+  themeMode,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<ThemeMode>(themeMode);
 
   const toggleTheme = () => {
     if (theme === "light") {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
+      setDarkTheme();
     } else {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
+      setLightTheme();
+    }
+  };
+
+  const setDarkTheme = useCallback(() => {
+    setTheme("dark");
+    document.documentElement.classList.add("dark");
+    syncTheme("dark");
+  }, []);
+
+  const setLightTheme = useCallback(() => {
+    setTheme("light");
+    document.documentElement.classList.remove("dark");
+    syncTheme("light");
+  }, []);
+
+  const syncTheme = async (theme: ThemeMode) => {
+    try {
+      const res = await fetch("/api/theme-mode", {
+        body: JSON.stringify({ themeMode: theme }),
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) {
+        console.error(`HTTP error! status: ${res.status}`);
+      } else {
+        const data = await res.json();
+        console.log(data);
+        return data;
+      }
+    } catch (error) {
+      console.error(`Error: ${error}`);
     }
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
-
-    if (localTheme) {
-      setTheme(localTheme);
-
-      if (localTheme === "dark") {
-        document.documentElement.classList.add("dark");
+    if (theme === "system") {
+      console.log("system");
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setDarkTheme();
       }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
     }
-  }, []);
+    // if (theme === "light") {
+    //   setLightTheme();
+    //   // update theme record in database
+    //   syncTheme(theme);
+    // } else setDarkTheme();
+  }, [setDarkTheme, theme]);
 
   return (
     <ThemeContext.Provider
