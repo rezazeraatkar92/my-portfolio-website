@@ -40,10 +40,10 @@ export default async function RootLayout({
             {children}
             <Footer />
 
-            <Toaster position='top-right' />
             <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
+        <Toaster position='top-right' />
       </body>
     </html>
   );
