@@ -5,7 +5,7 @@ import Card from "@/components/card";
 
 export default function Home() {
   return (
-    <main className='flex w-full flex-col items-center justify-between gap-3 bg-transparent px-4 pt-20 text-center md:flex-row'>
+    <main className='mx-auto flex max-w-4xl flex-col items-center justify-between gap-3 bg-transparent px-4 pt-20 text-center md:flex-row'>
       <Card>
         <Link
           href='/portfolio'

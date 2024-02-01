@@ -1,5 +1,10 @@
 import React, { ReactNode } from "react";
 
+export const metadata = {
+  title: "Reza Zeraatkar | Portfolio page",
+  description: "Here you can get more familiar with me",
+};
+
 interface IPortfolioLayoutProps {
   children: ReactNode;
 }

@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang='en' className='!scroll-smooth'>
       <body
-        className={`${inter.className} relative m-auto flex min-h-screen max-w-4xl flex-col justify-between bg-gray-50 text-gray-950 antialiased dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${inter.className} relative m-auto flex min-h-screen flex-col justify-between bg-gray-50 text-gray-950 antialiased dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
