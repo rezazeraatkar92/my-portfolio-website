@@ -1,6 +1,7 @@
+import Posts from "@/components/posts";
 import React from "react";
 
-interface IpageProps {}
+interface IPageProps {}
 
 export default function Blog() {
   return (
@@ -17,6 +18,7 @@ export default function Blog() {
         Here I will share my knowledge and experences as a Front-End Web
         Developer through some blog posts.
       </p>
+      <Posts />
     </main>
   );
 }

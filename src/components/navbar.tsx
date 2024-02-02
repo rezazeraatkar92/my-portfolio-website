@@ -10,6 +10,7 @@ export default function Navbar() {
       <div className='prose prose-xl mx-auto flex flex-col items-center justify-between gap-2  sm:flex-row'>
         <Link
           href='/'
+          target='_blank'
           className='flex items-center gap-1 text-white/90 no-underline hover:text-white'
         >
           <div className='flex h-14 w-14 items-center justify-center rounded-full border-[1px] border-black object-cover shadow-xl dark:border-slate-500'>
@@ -30,12 +31,14 @@ export default function Navbar() {
         <div className='flex flex-row justify-center gap-4 align-middle text-4xl text-white sm:justify-evenly lg:text-5xl'>
           <Link
             href='https://github.com/RezaZeraatkar'
+            target='_blank'
             className='text-white/90 hover:text-white'
           >
             <FaGithub />
           </Link>
           <Link
             href='https://linkedin.com/in/reza-zeraatkar'
+            target='_blank'
             className='text-white/90 hover:text-white'
           >
             <FaLinkedin />
