@@ -10,7 +10,6 @@ import html from "remark-html";
 const postsDirectory = path.join(process.cwd(), "blogposts");
 
 function getSortedPostsData() {
-  console.log("postsDirectory: ", postsDirectory);
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
@@ -38,8 +37,6 @@ function getSortedPostsData() {
 }
 
 async function getPostData(id: string) {
-  console.log(id);
-
   try {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");

@@ -10,7 +10,7 @@ export default function Blog() {
         Hello and Welcome 👋
         <br />
         <span className='whitespace-nowrap'>
-          I'm <span className='font-bold'>Reza Zeraatkar</span>
+          I&apos;m <span className='font-bold'>Reza Zeraatkar</span>
         </span>
         <br />
       </p>

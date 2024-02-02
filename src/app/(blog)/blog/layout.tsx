@@ -2,7 +2,7 @@ import Navbar from "@/components/navbar";
 import React, { ReactNode } from "react";
 
 export const metadata = {
-  title: "Reza Zeraatkar | Personal Blogpost",
+  title: "Reza Zeraatkar Blog",
   description:
     "Here I will share my knowledge and experences on nextjs/reactjs Front-End Web Developement",
 };
