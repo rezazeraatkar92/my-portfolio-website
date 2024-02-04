@@ -3,6 +3,8 @@ import React from "react";
 
 interface IPageProps {}
 
+export const revalidate = 86400;
+
 export default function Blog() {
   return (
     <div className='mx-auto'>

@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 
 import "highlight.js/styles/github-dark.css";
 
-export const revalidate = 10;
+export const revalidate = 86400;
 
 interface IPostProps {
   params: { id: string };
@@ -48,7 +48,7 @@ export default async function Post({ params: { id } }: IPostProps) {
   const pubDate = formatDate(meta.date);
 
   const tags = meta.tags.map((tag, i) => (
-    <Link key={i} href={`/tags/${tag}`}>
+    <Link key={i} href={`/blog/tags/${tag}`}>
       {tag}
     </Link>
   ));
