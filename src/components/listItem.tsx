@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 interface IListItemProps {
-  post: BlogPost;
+  post: PostMeta;
 }
 
 export default function ListItem({ post }: IListItemProps) {

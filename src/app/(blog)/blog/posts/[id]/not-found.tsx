@@ -6,9 +6,9 @@ export default function NotFound() {
     <div className='flex justify-center text-center'>
       <div>
         <h2>Not Found</h2>
-        <p>Could not find requested resource</p>
+        <p>Sorry, Could not find requested resource</p>
         <p>
-          Return{" "}
+          back to
           <Link href='/blog' className='text-blue-600 underline'>
             Blog Page
           </Link>
