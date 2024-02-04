@@ -1,5 +1,7 @@
 import { sql } from "@vercel/postgres";
 
+export const fetchCache = "force-no-store";
+
 export async function getThemeMode(): Promise<ThemeMode> {
   try {
     const { rows } =

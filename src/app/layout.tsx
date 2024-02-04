@@ -15,8 +15,6 @@ export const metadata = {
     "Reza is a full-stack developer with more than 5 years of experience.",
 };
 
-export const fetchCache = "force-no-store";
-
 export default async function RootLayout({
   children,
 }: {
