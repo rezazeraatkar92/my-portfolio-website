@@ -1,3 +1,5 @@
+type ThemeMode = "system" | "dark" | "light";
+
 type PostMeta = {
   id: string;
   title: string;
