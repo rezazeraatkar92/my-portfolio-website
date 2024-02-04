@@ -7,7 +7,7 @@ interface InavbarProps {}
 export default function Navbar() {
   return (
     <nav className='sticky top-0 z-10 bg-slate-600 p-4 drop-shadow-xl'>
-      <div className='prose prose-xl mx-auto flex flex-col items-center justify-between gap-2  sm:flex-row'>
+      <div className='prose prose-xl mx-auto flex flex-col items-center justify-between gap-2 sm:flex-row md:px-6'>
         <Link
           href='/'
           target='_blank'

@@ -1,5 +1,6 @@
 import formatDate from "@/lib/formatDate";
-import { getPost } from "@/lib/posts";
+import { getPost, getPosts } from "@/lib/posts";
+import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -8,16 +9,24 @@ interface IPostProps {
   params: { id: string };
 }
 
+export async function generateStaticParams() {
+  const posts = await getPosts();
+
+  return posts.map((post) => ({
+    id: post.id,
+  }));
+}
+
 export async function generateMetadata({ params: { id } }: IPostProps) {
   const post = await getPost(id);
   if (post.code === 404) {
     return {
       title: "Post Not Found",
-    };
+    } as Metadata;
   }
   return {
     title: post.data?.title,
-  };
+  } as Metadata;
 }
 
 export default async function Post({ params: { id } }: IPostProps) {

@@ -1,6 +1,7 @@
+import { Metadata } from "next";
 import React, { ReactNode } from "react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Reza Zeraatkar | Portfolio page",
   description: "Here you can get more familiar with me",
 };

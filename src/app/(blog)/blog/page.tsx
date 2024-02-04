@@ -5,12 +5,12 @@ interface IPageProps {}
 
 export default function Blog() {
   return (
-    <main className='mx-auto px-6'>
+    <div className='mx-auto'>
       <p className='prose prose-xl mb-4 mt-4 text-center text-3xl dark:text-white'>
         Hello and Welcome 👋
         <br />
         <span className='whitespace-nowrap'>
-          I&apos;m <span className='font-bold'>Reza Zeraatkar</span>
+          I'm <span className='font-bold'>Reza Zeraatkar</span>
         </span>
         <br />
       </p>
@@ -19,6 +19,6 @@ export default function Blog() {
         Developer through some blog posts.
       </p>
       <Posts />
-    </main>
+    </div>
   );
 }
