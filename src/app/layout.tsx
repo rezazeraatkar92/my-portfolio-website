@@ -30,7 +30,7 @@ export default async function RootLayout({
       <body
         className={`${inter.className} relative m-auto flex min-h-screen flex-col justify-between bg-gray-50 text-gray-950 antialiased dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
-        <ThemeContextProvider>
+        <ThemeContextProvider themeMode={theme}>
           <ActiveSectionContextProvider>
             {children}
             <Footer />

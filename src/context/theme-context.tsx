@@ -60,7 +60,7 @@ export default function ThemeContextProvider({
         console.error(`HTTP error! status: ${res.status}`);
       } else {
         const data = await res.json();
-        console.log(data);
+
         return data;
       }
     } catch (error) {
@@ -70,7 +70,7 @@ export default function ThemeContextProvider({
 
   useEffect(() => {
     if (theme === "system") {
-      console.log("system");
+
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         setDarkTheme();
       }
