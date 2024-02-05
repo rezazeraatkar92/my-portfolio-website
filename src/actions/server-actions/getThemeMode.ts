@@ -1,8 +1,9 @@
+"use server";
+
 import { sql } from "@vercel/postgres";
 
-export const fetchCache = "force-no-store";
-
 export async function getThemeMode(): Promise<ThemeMode> {
+  // const _cookies = cookies()
   try {
     const { rows } =
       await sql`SELECT setting_value FROM settings WHERE setting_name = 'theme';`;

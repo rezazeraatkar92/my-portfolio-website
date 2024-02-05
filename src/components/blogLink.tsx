@@ -9,15 +9,15 @@ export default function BlogLink() {
     <Link
       href='/blog'
       target='_blank'
-      className='group fixed right-3 top-0 z-[950] flex h-[4.5rem] w-16
-                          items-center justify-center gap-1 rounded-none 
-                          border border-white border-opacity-40 bg-white 
-                          bg-opacity-80 leading-4 shadow-lg 
-                          shadow-black/[0.03] backdrop-blur-[0.5rem]
-                          dark:border-black/40 dark:bg-gray-950 dark:bg-opacity-75 
-                          sm:top-6 sm:h-[3.25rem] sm:rounded-full'
+      className='group fixed right-3 flex items-center justify-center gap-1 whitespace-nowrap rounded-full
+                          border border-white border-opacity-40
+                          bg-gray-900 p-1 leading-4 text-white 
+                          shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] 
+                          dark:border-black/40
+                          dark:bg-orange-700 dark:bg-opacity-75 dark:text-gray-300 
+                          max-sm:left-1/2 max-sm:top-10 max-sm:-translate-x-1/2 sm:relative sm:py-3'
     >
-      blog
+      My blog
       <ImNewTab className='opacity-60 transition group-hover:-translate-y-1 group-hover:translate-x-1' />
     </Link>
   );

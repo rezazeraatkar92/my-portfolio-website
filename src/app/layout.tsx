@@ -20,6 +20,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   // get app theme
   const theme = await getThemeMode();
 

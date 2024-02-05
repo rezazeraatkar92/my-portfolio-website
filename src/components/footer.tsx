@@ -9,7 +9,7 @@ export default function Footer() {
       <p className='text-xs'>
         <span className='font-semibold'>About this website:</span> built with
         React & Next.js 14 (App Router & Server Actions), TypeScript, Tailwind
-        CSS, Framer Motion, React Email & Resend, Vercel hosting.
+        CSS, Framer Motion, mdx markdown, React Email & Resend, Vercel hosting.
       </p>
     </footer>
   );

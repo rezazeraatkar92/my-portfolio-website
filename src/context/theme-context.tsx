@@ -1,5 +1,6 @@
 "use client";
 
+import { revalidatePath } from "next/cache";
 import React, {
   useEffect,
   useState,
@@ -37,6 +38,7 @@ export default function ThemeContextProvider({
   const setDarkTheme = useCallback(() => {
     setTheme("dark");
     document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("light");
     syncTheme("dark");
   }, []);
 
@@ -54,6 +56,7 @@ export default function ThemeContextProvider({
         headers: {
           "Content-Type": "application/json",
         },
+        cache: "no-store",
       });
 
       if (!res.ok) {
@@ -70,7 +73,6 @@ export default function ThemeContextProvider({
 
   useEffect(() => {
     if (theme === "system") {
-
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         setDarkTheme();
       }

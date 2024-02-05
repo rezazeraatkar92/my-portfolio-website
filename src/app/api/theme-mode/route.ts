@@ -1,4 +1,5 @@
 import { sql } from "@vercel/postgres";
+import { revalidatePath } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
@@ -6,6 +7,9 @@ export async function POST(request: NextRequest) {
   try {
     const result =
       await sql`UPDATE settings SET setting_value = ${themeMode} WHERE setting_name = 'theme';`;
+
+    revalidatePath("/", "layout");
+
     return NextResponse.json({ message: "OK", result }, { status: 201 });
   } catch (error) {
     console.error(error);

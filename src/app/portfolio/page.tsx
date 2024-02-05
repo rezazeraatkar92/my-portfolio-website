@@ -1,5 +1,4 @@
 import About from "@/components/about";
-import BlogLink from "@/components/blogLink";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import Header from "@/components/header";
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <main className='flex flex-col items-center px-4'>
       <Header />
-      <BlogLink />
       <Intro />
       <SectionDivider />
       <About />
