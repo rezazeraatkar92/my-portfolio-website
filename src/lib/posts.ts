@@ -28,7 +28,10 @@ export async function getPostByName(
       },
     }
   );
-  if (!res.ok) return undefined;
+  if (!res.ok) {
+    console.error(res);
+    return undefined;
+  }
 
   const rawMDX = await res.text();
   if (rawMDX === "404: Not Found") return undefined;
@@ -85,7 +88,10 @@ export async function getPostsMetaData(): Promise<PostMeta[] | undefined> {
     }
   );
 
-  if (!res.ok) return undefined;
+  if (!res.ok) {
+    console.error(res);
+    return undefined;
+  }
 
   const repoFileTree: FileTree = await res.json();
 
