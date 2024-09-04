@@ -59,7 +59,7 @@ export default async function Post({ params: { id } }: IPostProps) {
       <p className='mt-0 text-sm'>{pubDate}</p>
       <article>{content}</article>
       <section>
-        <h3>Realted:</h3>
+        <h3>Related:</h3>
         <div className='flex flex-grow gap-4'>{tags}</div>
       </section>
       <p>

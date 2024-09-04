@@ -4,6 +4,7 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import NextTopLoader from "nextjs-toploader";
 import dynamic from "next/dynamic";
 
 const ThemeSwitch = dynamic(() => import("@/components/theme-switch"), {
@@ -31,6 +32,17 @@ export default async function RootLayout({
       <body
         className={`${inter.className} relative m-auto flex min-h-screen flex-col justify-between bg-gray-50 text-gray-950 antialiased dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
+        <NextTopLoader
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl
+          easing='ease'
+          speed={200}
+          shadow='0 0 10px #2299DD,0 0 5px #2299DD'
+          color='#2299DD'
+          showSpinner={false}
+        />
         <ThemeProvider
           enableSystem
           attribute='class'

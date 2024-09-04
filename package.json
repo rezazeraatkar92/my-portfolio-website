@@ -22,6 +22,7 @@
     "next-mdx-remote": "^4.4.1",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.3.0",
+    "nextjs-toploader": "^3.6.15",
     "npm": "^10.2.5",
     "react": "^18",
     "react-dom": "^18",

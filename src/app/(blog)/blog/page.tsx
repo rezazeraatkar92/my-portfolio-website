@@ -17,7 +17,7 @@ export default function Blog() {
         <br />
       </p>
       <p className='text-center'>
-        Here I will share my knowledge and experences as a Front-End Web
+        Here I will share my knowledge and experiences as a Front-End Web
         Developer through some blog posts.
       </p>
       <Posts />

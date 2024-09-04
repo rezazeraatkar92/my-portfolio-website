@@ -43,7 +43,7 @@ export default function About() {
         <span className='font-medium'>TypeScript</span> and{" "}
         <span className='font-medium'>Docker</span>. I am always eager to learn
         new technologies. I' also familiar with some concepts in Artificial
-        Inteligence (AI) like natural language processing, neural networks and
+        Intelligence (AI) like natural language processing, neural networks and
         coding{" "}
         <Link
           href='https://github.com/RezaZeraatkar/digiWebScraper'

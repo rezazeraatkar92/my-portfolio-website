@@ -50,7 +50,7 @@ export default function Home() {
           <p>
             In my blog website, I will share my programming experiences, ideas,
             challenges and some learning content which would help other
-            developers throughout thier journey as a react/nextjs developer.
+            developers throughout their journey as a react/nextjs developer.
           </p>
           <span className='font-bold'>
             click to see my blog page

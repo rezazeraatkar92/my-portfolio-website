@@ -5,7 +5,7 @@ import React, { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Reza Zeraatkar Blog",
   description:
-    "Here I will share my knowledge and experences on nextjs/reactjs Front-End Web Developement",
+    "Here I will share my knowledge and experiences on nextjs/reactjs Front-End Web Development",
 };
 
 interface IBlogLayoutProps {

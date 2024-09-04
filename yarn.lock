@@ -4126,6 +4126,14 @@ next@^14.1.0:
     "@next/swc-win32-ia32-msvc" "14.2.7"
     "@next/swc-win32-x64-msvc" "14.2.7"
 
+nextjs-toploader@^3.6.15:
+  version "3.6.15"
+  resolved "https://registry.npmjs.org/nextjs-toploader/-/nextjs-toploader-3.6.15.tgz#ff55cb718d75755d2c1d3723483995f1d3cd746f"
+  integrity sha512-DMxO0BiT+NbGU7E9A8U2+0e7rRbG9qozbk19DFXhKRc9wuhgTPR/u8zr2TevsbFtVxDb9mf8YHFz+oBgjMC+HA==
+  dependencies:
+    nprogress "^0.2.0"
+    prop-types "^15.8.1"
+
 node-gyp-build@^4.3.0:
   version "4.8.2"
   resolved "https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-4.8.2.tgz#4f802b71c1ab2ca16af830e6c1ea7dd1ad9496fa"
@@ -4329,6 +4337,11 @@ npm@^10.2.5:
     validate-npm-package-name "^5.0.1"
     which "^4.0.0"
     write-file-atomic "^5.0.1"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  integrity sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==
 
 object-assign@^4.0.1, object-assign@^4.1.1:
   version "4.1.1"

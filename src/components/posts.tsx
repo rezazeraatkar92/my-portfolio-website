@@ -6,6 +6,8 @@ interface IpostsProps {}
 export default async function Posts() {
   const posts = await getPostsMetaData();
 
+  console.log(posts);
+
   if (!posts) {
     return (
       <p className='mt-10 text-center'>
