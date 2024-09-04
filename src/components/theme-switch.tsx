@@ -1,11 +1,20 @@
 "use client";
 
-import { useTheme } from "@/context/theme-context";
-import React from "react";
+import { useTheme } from "next-themes";
+import React, { useCallback, useEffect, useState } from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 
 export default function ThemeSwitch() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const toggleTheme = useCallback(() => {
+    setTheme(theme === "light" ? "dark" : "light");
+  }, [theme, setTheme]);
+
+  if (!mounted) return null;
 
   return (
     <button

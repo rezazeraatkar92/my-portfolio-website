@@ -2,10 +2,16 @@ import "@/app/globals.css";
 import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
-import ThemeSwitch from "@/components/theme-switch";
-import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
-import { getThemeMode } from "@/actions/server-actions/getThemeMode";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import dynamic from "next/dynamic";
+
+const ThemeSwitch = dynamic(() => import("@/components/theme-switch"), {
+  loading: () => (
+    <div className='fixed bottom-5 right-5 flex h-[3rem] w-[3rem] animate-pulse items-center justify-center rounded-full border border-gray-900 border-opacity-40 bg-gray-200 bg-opacity-80 shadow-2xl backdrop-blur-[0.5rem] transition-all hover:scale-[1.15] active:scale-105 dark:border-yellow-700 dark:bg-gray-950'></div>
+  ),
+  ssr: false,
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,23 +26,24 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-  // get app theme
-  const theme = await getThemeMode();
-
   return (
-    <html lang='en' className={`!scroll-smooth ${theme}`}>
+    <html lang='en' className={`!scroll-smooth`}>
       <body
         className={`${inter.className} relative m-auto flex min-h-screen flex-col justify-between bg-gray-50 text-gray-950 antialiased dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
-        <ThemeContextProvider themeMode={theme}>
+        <ThemeProvider
+          enableSystem
+          attribute='class'
+          defaultTheme='system'
+          themes={["light", "dark"]}
+        >
           <ActiveSectionContextProvider>
             {children}
             <Footer />
 
             <ThemeSwitch />
           </ActiveSectionContextProvider>
-        </ThemeContextProvider>
+        </ThemeProvider>
         <Toaster position='top-right' />
       </body>
     </html>
