@@ -1,12 +1,8 @@
 import { getPostsMetaData } from "@/lib/posts";
 import ListItem from "./listItem";
 
-interface IpostsProps {}
-
 export default async function Posts() {
   const posts = await getPostsMetaData();
-
-  console.log(posts);
 
   if (!posts) {
     return (
